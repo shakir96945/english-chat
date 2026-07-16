@@ -1,0 +1,32 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Avatar Images
+    match /avatars/{userId}/{allPaths=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && request.auth.uid == userId 
+                   && request.resource.size < 5 * 1024 * 1024
+                   && request.resource.contentType.matches('image/.*');
+    }
+    
+    // Group Avatars
+    match /groups/{groupId}/{allPaths=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() 
+                   && request.resource.size < 5 * 1024 * 1024
+                   && request.resource.contentType.matches('image/.*');
+    }
+    
+    // Shared Media files (images, audio notes, docs)
+    match /shared_files/{chatId}/{fileId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && request.resource.size < 20 * 1024 * 1024; // 20MB limit
+    }
+  }
+}
