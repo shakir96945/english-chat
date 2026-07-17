@@ -3,7 +3,7 @@ description: A premier real-time Flutter chat application designed for learning 
 version: 1.1.0+2
 
 environment:
-  sdk: ">=3.24.0 <4.0.0"
+  sdk: ">=3.5.0 <4.0.0"
 
 dependencies:
   flutter:
