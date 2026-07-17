@@ -3,40 +3,40 @@ description: A premier real-time Flutter chat application designed for learning 
 version: 1.1.0+2
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: ">=3.24.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   # Firebase Core and Services
-  firebase_core: ^2.27.0
-  firebase_auth: ^4.17.8
-  cloud_firestore: ^4.15.8
-  firebase_storage: ^11.6.8
-  firebase_messaging: ^14.7.19
+  firebase_core: ^3.3.0
+  firebase_auth: ^5.1.4
+  cloud_firestore: ^5.2.1
+  firebase_storage: ^12.1.2
+  firebase_messaging: ^15.1.3
 
   # ZEGOCLOUD Real-time Call & Video SDK
-  zego_uikit_prebuilt_call: ^3.0.0
+  zego_uikit_prebuilt_call: ^5.0.0
 
   # Local Persistence, State & Utilities
-  provider: ^6.1.1
-  shared_preferences: ^2.2.2
-  cached_network_image: ^3.3.1
-  flutter_local_notifications: ^16.3.0
-  emoji_picker_flutter: ^2.2.0
+  provider: ^6.1.2
+  shared_preferences: ^2.3.2
+  cached_network_image: ^3.4.1
+  flutter_local_notifications: ^17.2.2
+  emoji_picker_flutter: ^3.0.0
   google_fonts: ^6.2.1
   intl: ^0.19.0
-  image_picker: ^1.0.7
-  uuid: ^4.5.1
-  flutter_sound: ^9.2.13
-  permission_handler: ^11.4.0
-  file_picker: ^8.0.7
+  image_picker: ^1.1.2
+  uuid: ^4.4.0
+  flutter_sound: ^9.12.2
+  permission_handler: ^11.3.1
+  file_picker: ^8.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
+  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
