@@ -17,7 +17,7 @@ dependencies:
   firebase_messaging: ^15.1.3
 
   # ZEGOCLOUD Real-time Call & Video SDK
-  zego_uikit_prebuilt_call: ^5.0.0
+  zego_uikit_prebuilt_call: ^4.16.28
 
   # Local Persistence, State & Utilities
   provider: ^6.1.2
